@@ -393,6 +393,18 @@ div#map {
 
 /*--------------------------------------------Media Queries*/
 
+/* Custom tooltip */
+.custom-tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    display: none; /* Initially hidden */
+    z-index: 1000; /* Ensure it appears above the map */
+}
+
 @media(min-width: 992px) {
     .section-column {
         padding: 0 30px 30px;

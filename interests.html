@@ -62,6 +62,7 @@
                     </div>
                 </div>
                 <div id="map"></div>
+                <div id="tooltip" class="custom-tooltip"></div>
             </div>
             <div class="col-md-8 bg-color-groups">
                 <div class="row">
@@ -205,7 +206,7 @@
      
 
     <script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiOJHsG6kY5DkyLYUNXoEt0xwfSaKlkLw&libraries=maps,marker&callback=initMap"
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCI6Os7XhLkdhPbqZQxN1ibuUDoIpMt1qg&libraries=maps,marker&callback=initMap"
   async
   defer
 ></script>
@@ -213,38 +214,7 @@
     <!-- External Js link -->
     <script src="assets/js/maps.js"></script>
 
-    <script>
-        function initMap() {
-            const map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 3,
-                center: {
-                    lat: 46.69261,
-                    lng: -33.134766
-                }
-            });
-
-            // Labels for markers
-        const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-// Locations for markers
-        const locations = [
-            { lat: 40.785091, lng: -73.968285 },
-            { lat: 41.084045, lng: -73.874245 },
-            { lat: 40.754932, lng: -73.984016 },
-        ];
-
-// Create markers
-        const markers = locations.map(function(location, i) {
-            return new google.maps.Marker({
-                position: location,
-                label: labels[i % labels.length]
-            });
-        });
-
-// Initialize MarkerClusterer
-        const markerCluster = new markerClusterer.MarkerClusterer({ map, markers });
-        }
-    </script>
+    <script src="assets/js/maps.js"></script>
 </body>
 
 </html>
